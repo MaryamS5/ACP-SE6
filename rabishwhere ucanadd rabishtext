@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gibberish Toggle</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #gibberish {
+            margin-top: 20px;
+            font-size: 18px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Click to add or remove gibberish!</h2>
+
+    <p id="gibberish"></p>
+
+    <button onclick="addGibberish()">Add Gibberish</button>
+    <button onclick="removeGibberish()">Remove Gibberish</button>
+
+    <script>
+        function addGibberish() {
+            document.getElementById("gibberish").innerText = "asdjklqwe123 @#$% Lorem ipsum blabla!! 🤯";
+        }
+
+        function removeGibberish() {
+            document.getElementById("gibberish").innerText = "";
+        }
+    </script>
+
+</body>
+</html>

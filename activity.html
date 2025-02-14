@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing Activity</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .button {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid black;
+            cursor: pointer;
+            display: inline-block;
+        }
+        .canvas {
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 20px auto;
+            position: relative;
+        }
+        .shape {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Drawing Activity</h2>
+    
+    <p>Click to draw:</p>
+    <div class="button" onclick="drawShape('circle')">Circle</div>
+    <div class="button" onclick="drawShape('rectangle')">Rectangle</div>
+
+    <div class="canvas" id="canvas"></div>
+
+    <p>Click to fill color:</p>
+    <div class="button" onclick="fillColor('red')">Red</div>
+    <div class="button" onclick="fillColor('blue')">Blue</div>
+    <div class="button" onclick="fillColor('black')">Black</div>
+
+    <script>
+        let shapeElement = null;
+
+        function drawShape(shape) {
+            const canvas = document.getElementById("canvas");
+            canvas.innerHTML = "";
+
+            shapeElement = document.createElement("div");
+            shapeElement.classList.add("shape");
+            shapeElement.style.border = "2px solid green";
+
+            if (shape === "circle") {
+                shapeElement.style.width = "80px";
+                shapeElement.style.height = "80px";
+                shapeElement.style.borderRadius = "50%";
+            } else {
+                shapeElement.style.width = "120px";
+                shapeElement.style.height = "60px";
+            }
+
+            canvas.appendChild(shapeElement);
+        }
+
+        function fillColor(color) {
+            if (shapeElement) {
+                shapeElement.style.backgroundColor = color;
+            }
+        }
+    </script>
+
+</body>
+</html>

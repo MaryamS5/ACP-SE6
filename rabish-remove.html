@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Gibberish</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #gibberish {
+            margin-top: 20px;
+            font-size: 18px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Click to remove the gibberish!</h2>
+
+    <p id="gibberish">asdjklqwe123 @#$% Lorem ipsum blabla!! 🤯</p>
+
+    <button onclick="removeGibberish()">Clear Text</button>
+
+    <script>
+        function removeGibberish() {
+            document.getElementById("gibberish").innerText = "";
+        }
+    </script>
+
+</body>
+</html>

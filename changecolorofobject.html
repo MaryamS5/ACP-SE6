@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Color on Click</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 10px;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box" onclick="changeColor(this)">Click Me</div>
+    <div class="box" onclick="changeColor(this)">Click Me</div>
+    <div class="box" onclick="changeColor(this)">Click Me</div>
+
+    <script>
+        function changeColor(element) {
+            let colors = ["red", "green", "blue", "orange", "purple", "pink","yellow"];
+            let randomColor = colors[Math.floor(Math.random() * colors.length)];
+            element.style.backgroundColor = randomColor;
+        }
+    </script>
+
+</body>
+</html>

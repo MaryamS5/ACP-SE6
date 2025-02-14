@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        canvas {
+            border: 1px solid black;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>        
+</head>
+<body>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+
+    <script>
+        // Practice variables
+        console.log("hello everyone");
+        var num1 = 34;
+        var num2 = 23;
+        console.log("answer is", num1 + num2);
+
+        // Defining an object
+        var objec = {
+            name: "Maryam Sohail",
+            sap: 3444,
+            subject: "acp",
+        };
+        console.log(objec);
+
+        // Array
+        const arr = ["rose", "lily"];
+        console.log("printing array", arr);
+
+        // Conversion to string (FIXED)
+        console.log("100" + 23);  // Removed invalid `console.log.write`
+
+        // Type checking
+        console.log(typeof 10);
+        console.log(typeof "hello world");
+        console.log(typeof Number(1));
+        console.log(typeof Number("hello"));
+        console.log(typeof Number(1));
+
+        // JavaScript to draw on the canvas
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+        // Draw blue rectangle
+        ctx.fillStyle = "blue";
+        ctx.fillRect(50, 50, 100, 60);
+
+        // Draw green circle
+        ctx.beginPath();
+        ctx.arc(200, 100, 40, 0, Math.PI * 2);
+        ctx.fillStyle = "green";
+        ctx.fill();
+        //ctx.closePath();
+
+        // Draw black line
+        ctx.beginPath();
+        ctx.moveTo(20, 200);
+        ctx.lineTo(300, 200);
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        ctx.closePath();
+    </script>
+</body>
+</html>
